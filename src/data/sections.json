@@ -1,0 +1,57 @@
+[
+    {
+        "id": "heading",
+        "title": "CV",
+        "icon": ""
+    },
+    {
+        "id": "contact",
+        "title": "Contact Details",
+        "icon": "📞"
+    },
+    {
+        "id": "summary",
+        "title": "Professional Summary",
+        "icon": "📝"
+    },
+    {
+        "id": "tldr",
+        "title": "TL;DR",
+        "icon": "⚡"
+    },
+    {
+        "id": "experience",
+        "title": "Work Experience",
+        "icon": "💼"
+    },
+    {
+        "id": "education",
+        "title": "Education",
+        "icon": "🎓"
+    },
+    {
+        "id": "skills",
+        "title": "Skills",
+        "icon": "💻"
+    },
+    {
+        "id": "projects",
+        "title": "Projects",
+        "icon": "📂"
+    },
+    {
+        "id": "certificates",
+        "title": "Certifications",
+        "icon": "🏅"
+    },
+    {
+        "id": "volunteering",
+        "title": "Volunteering",
+        "icon": "🤝"
+    },
+    {
+        "id": "referees",
+        "title": "Referees",
+        "icon": "📇"
+    }
+]
