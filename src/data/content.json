@@ -1,0 +1,87 @@
+{
+    "heading": {
+        "title": "Frontend Developer",
+        "subtitle": "Specializing in React & Modern JavaScript"
+    },
+    "contact": {
+        "name": "Jane Doe",
+        "email": "jane.doe@email.com",
+        "phone": "+64 21 123 4567",
+        "linkedin": "linkedin.com/in/janedoe",
+        "github": "github.com/janedoe"
+    },
+    "summary": "Passionate frontend developer with 5+ years of experience building responsive and user-friendly web applications using React, TypeScript, and modern UI frameworks. Adept at collaborating in agile teams and delivering high-quality code.",
+    "experience": [
+        {
+            "company": "Tech Solutions Ltd.",
+            "position": "Frontend Developer",
+            "location": "Auckland, New Zealand",
+            "period": "2021 – Present",
+            "tasks": [
+                "Developed and maintained scalable React applications",
+                "Collaborated with UX designers to implement responsive layouts",
+                "Improved application performance by optimizing React components"
+            ]
+        },
+        {
+            "company": "Global Web Agency",
+            "position": "Web Developer",
+            "location": "Wellington, New Zealand",
+            "period": "2017 – 2021",
+            "tasks": [
+                "Built and maintained websites with HTML, CSS, and JavaScript",
+                "Implemented accessibility best practices (WCAG standards)",
+                "Worked in agile teams using Scrum and Kanban methodologies"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "University of Auckland",
+            "degree": "Bachelor of Science in Computer Science",
+            "year": "2017"
+        }
+    ],
+    "skills": [
+        "HTML5, CSS3 (SASS, SCSS, CSS Modules)",
+        "JavaScript (ES6+), TypeScript",
+        "React, Redux, Next.js",
+        "Jest, React Testing Library, Storybook",
+        "Responsive Design, Accessibility, SEO",
+        "Agile (Scrum, Kanban)"
+    ],
+    "projects": [
+        {
+            "name": "Personal Portfolio Website",
+            "description": "Designed and built a responsive portfolio website using React and TailwindCSS to showcase projects and skills.",
+            "link": "https://janedoe.dev"
+        },
+        {
+            "name": "E-Commerce Demo App",
+            "description": "Developed a mock e-commerce web app with shopping cart functionality, product filtering, and Stripe integration.",
+            "link": "https://github.com/janedoe/ecommerce-demo"
+        }
+    ],
+    "certificates": [
+        {
+            "name": "AWS Certified Cloud Practitioner",
+            "year": "2023"
+        },
+        {
+            "name": "Scrum Master Certified (SMC)",
+            "year": "2022"
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Code Club Aotearoa",
+            "role": "Volunteer Mentor",
+            "period": "2020 – Present",
+            "tasks": [
+                "Mentored students aged 10–14 in learning basic programming concepts",
+                "Assisted with coding workshops using Scratch and Python"
+            ]
+        }
+    ],
+    "referees": "References available on request"
+}
