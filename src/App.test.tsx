@@ -4,8 +4,8 @@ import { describe, it, expect } from 'vitest';
 import { App } from 'src/App';
 
 describe('App', () => {
-  it('renders headline', () => {
-    render(<App />);
-    expect(screen.getByText(/CV App/i)).toBeInTheDocument();
-  });
+    it('renders headline', async () => {
+        render(<App />);
+        expect(await screen.findByText(/CV App/i)).toBeInTheDocument();
+    });
 });

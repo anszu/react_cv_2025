@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "src/*": ["src/*"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "src/*": ["src/*"]
+        },
+        "types": ["vitest/globals"]
     },
-    "types": ["vitest/globals"]
-  },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" }
+    ]
 }

@@ -10,8 +10,4 @@ export default meta;
 
 type Story = StoryObj<typeof App>;
 
-export const Default: Story = {
-    args: {
-        // Add your props here
-    },
-};
+export const Default: Story = {};
