@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import type { ContentData } from 'src/Data/types/ContentData';
-import type { SectionsData } from 'src/Data/types/SectionsData';
+import type { SectionData } from 'src/Data/types/SectionData';
 
-type DataType = ContentData | SectionsData;
+type DataType = ContentData | SectionData;
 
-export const useData = (dataSrc: string) => {
-    const [data, setData] = useState<DataType | null>(null);
+export const useData = <T = DataType>(dataSrc: string) => {
+    const [data, setData] = useState<T | null>(null);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState(true);
 

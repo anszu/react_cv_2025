@@ -1,8 +1,8 @@
 import type { ContentData } from 'src/Data/types/ContentData';
-import type { SectionsData } from 'src/Data/types/SectionsData';
+import type { SectionData } from 'src/Data/types/SectionData';
 
 export type DataContextType = {
-    data: ContentData | SectionsData | null;
+    data: ContentData | SectionData | null;
     error: Error | null;
     loading: boolean;
 };
