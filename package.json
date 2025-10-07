@@ -11,7 +11,7 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "ci": "npm run build && npm run check-format && npm run test && npm run test -- --coverage",
+        "ci": "npm run build --verbose && npm run check-format && npm run test && npm run test -- --coverage",
         "format": "prettier --write .",
         "check-format": "prettier --check .",
         "test": "vitest run",

@@ -51,7 +51,6 @@ export default defineConfig({
                         'react-dom',
                         'react/jsx-dev-runtime',
                         '@storybook/react',
-                        '@storybook/addon-essentials',
                         'markdown-to-jsx',
                     ],
                 },
