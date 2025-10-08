@@ -1,6 +1,6 @@
 export type ContentData = ContentType[];
 
-interface ContentType {
+export interface ContentType {
     heading: {
         title: string;
         subtitle: string;
