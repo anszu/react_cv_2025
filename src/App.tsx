@@ -4,9 +4,8 @@ import { Sections } from 'src/Sections/Sections';
 export const App = () => {
     return (
         <DataProvider>
-            <div className="m-0 p-0 min-h-full min-w-full bg-gray-100 text-gray-800 font-sans">
+            <div className="m-0 p-0 min-h-full min-w-full bg-gray-100 font-sans">
                 <div className="max-w-3xl mx-auto bg-white h-full p-8 md:p-12">
-                    <h1 className="text-3xl font-bold mb-8 md:mb-12">CV App</h1>
                     <Sections />
                 </div>
             </div>

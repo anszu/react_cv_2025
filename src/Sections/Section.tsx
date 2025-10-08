@@ -6,7 +6,7 @@ export const Section = ({ id, title, icon }: SectionType) => {
 
     return (
         <div key={id}>
-            <div className="text-xl font-semibold mb-4 flex">
+            <div className="text-xl font-semibold mb-4 flex text-gray-700">
                 {iconElement}
                 <h2>{title}</h2>
             </div>
