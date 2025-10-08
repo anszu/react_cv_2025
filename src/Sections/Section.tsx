@@ -1,4 +1,5 @@
 import type { SectionType } from 'src/Data/types/SectionData';
+import { Content } from 'src/Content/Content';
 
 export const Section = ({ id, title, icon }: SectionType) => {
     const iconElement = icon ? <div className="mr-4">{icon}</div> : null;
@@ -9,10 +10,9 @@ export const Section = ({ id, title, icon }: SectionType) => {
                 {iconElement}
                 <h2>{title}</h2>
             </div>
-            <p className="text-gray-700">
-                Das ist eine einfache, ruhige Karte mit etwas Schatten und
-                sanften Rundungen.
-            </p>
+            <div className="text-gray-700">
+                <Content contentId={id} />
+            </div>
         </div>
     );
 };
