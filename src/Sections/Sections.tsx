@@ -3,7 +3,9 @@ import type { SectionType, SectionData } from 'src/Data/types/SectionData';
 import { Section } from 'src/Sections/Section';
 
 export const Sections = () => {
-    const { data } = useData<SectionData>('src/Data/json/sections.json');
+    const { data } = useData<SectionData>(
+        'src/Data/json/sections_anikaszuppa.json',
+    );
 
     if (!data) return null;
 

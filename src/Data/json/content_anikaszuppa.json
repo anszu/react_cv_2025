@@ -1,12 +1,10 @@
 {
     "heading": {
         "title": "Frontend Developer",
-        "subtitle": "Specialized in React & Modern JavaScript"
+        "subtitle": "Specialized in React Development & Modern Frontend Architecture"
     },
     "contact": {
-        "name": "Jane Doe",
-        "email": "jane.doe@email.com",
-        "phone": "+64 21 123 4567",
+        "name": "Anika Szuppa",
         "linkedin": "linkedin.com/in/janedoe",
         "github": "github.com/janedoe"
     },
