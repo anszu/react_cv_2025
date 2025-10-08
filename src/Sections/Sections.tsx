@@ -8,7 +8,7 @@ export const Sections = () => {
     if (!data) return null;
 
     return (
-        <div className="flex flex-col gap-8 md:gap-10">
+        <div className="flex flex-col gap-10 md:gap-12">
             {data.map((section: SectionType) => (
                 <Section key={section.id} {...section} />
             ))}
