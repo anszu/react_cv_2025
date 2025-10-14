@@ -2,21 +2,21 @@ import type { ContentType } from 'src/Data/types/ContentData';
 type ContactData = ContentType['contact'];
 
 export const Contact = ({ data }: { data: ContactData }) => (
-    <address>
-        <div>{data.name}</div>
-        <div>
-            <a href={`mailto:${data.email}`}>{data.email}</a>
-        </div>
-        <div>{data.phone}</div>
-        {data.linkedin && (
-            <div>
-                <a href={data.linkedin}>{data.linkedin}</a>
-            </div>
-        )}
-        {data.github && (
-            <div>
-                <a href={data.github}>{data.github}</a>
-            </div>
-        )}
-    </address>
+    <div className="ml-10 space-y-4">
+        {data.name && <h3>{data.name}</h3>}
+        {data.phone && <div>{data.phone}</div>}
+        <address>
+            {data?.links.map((link, id) => (
+                <div key={`${link.label}-${id}`} className="flex">
+                    <div className="min-w-32">{link.label}: </div>
+                    <a
+                        href={link.url}
+                        className="underline hover:text-gray-500 hover:no-underline"
+                    >
+                        {link.url}
+                    </a>
+                </div>
+            ))}
+        </address>
+    </div>
 );

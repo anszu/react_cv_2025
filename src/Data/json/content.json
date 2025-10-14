@@ -5,10 +5,16 @@
     },
     "contact": {
         "name": "Jane Doe",
-        "email": "jane.doe@email.com",
         "phone": "+64 21 123 4567",
-        "linkedin": "linkedin.com/in/janedoe",
-        "github": "github.com/janedoe"
+        "links": [
+            {
+                "label": "LinkedIn",
+                "url": "http://linkedin.com/in/janedoe"
+            },
+            { "label": "GitHub", "url": "http://github.com/janedoe" },
+            { "label": "CV", "url": "https://janedoe.github.io/" },
+            { "label": "E-Mail", "url": "mailto:jane.doe@email.com" }
+        ]
     },
     "summary": "Passionate frontend developer with 5+ years of experience building responsive and user-friendly web applications using React, TypeScript, and modern UI frameworks. Adept at collaborating in agile teams and delivering high-quality code.",
     "experience": [

@@ -7,10 +7,8 @@ export interface ContentType {
     };
     contact: {
         name: string;
-        email: string;
         phone: string;
-        linkedin: string;
-        github: string;
+        links: { label: string; url: string }[];
     };
     summary: string;
     experience: {

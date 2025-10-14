@@ -14,6 +14,23 @@ export default defineConfig({
         globals: true,
         environment: 'jsdom',
         exclude: ['node_modules', 'dist'],
+        coverage: {
+            provider: 'v8', // oder 'v8'
+            reporter: ['text', 'lcov'],
+            exclude: [
+                'src/mocks/**',
+                'src/**/*.stories.*',
+                'src/**/handlers.*',
+                'src/**/types/**',
+                'eslint.config.js',
+                'vitest.config.ts',
+                'vite.config.ts',
+                '.storybook',
+                'dist',
+                'src/main.tsx',
+                'public',
+            ],
+        },
         projects: [
             // Unit / Integration Tests
             defineProject({
