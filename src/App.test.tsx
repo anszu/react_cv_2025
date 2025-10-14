@@ -6,6 +6,6 @@ import { App } from 'src/App';
 describe('App', () => {
     it('renders headline', async () => {
         render(<App />);
-        expect(await screen.findByText(/CV App/i)).toBeInTheDocument();
+        expect(await screen.findByTestId('app')).toBeInTheDocument();
     });
 });

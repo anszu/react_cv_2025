@@ -1,18 +1,18 @@
 [
     {
         "id": "heading",
-        "title": "CV Anika Szuppa",
+        "title": "Anika Szuppa --- Curriculum vitae",
         "icon": ""
     },
     {
         "id": "contact",
         "title": "Contact Details",
-        "icon": "📞"
+        "icon": "✉️"
     },
     {
         "id": "summary",
         "title": "Professional Summary",
-        "icon": "📝"
+        "icon": "👩‍💻"
     },
     {
         "id": "tldr",
@@ -52,6 +52,6 @@
     {
         "id": "referees",
         "title": "Referees",
-        "icon": "📇"
+        "icon": "👩‍💼"
     }
 ]

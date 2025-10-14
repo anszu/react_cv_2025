@@ -1,12 +1,18 @@
 {
     "heading": {
-        "title": "Frontend Developer",
+        "title": "Senior Frontend Developer",
         "subtitle": "Specialized in React Development & Modern Frontend Architecture"
     },
     "contact": {
         "name": "Anika Szuppa",
-        "linkedin": "linkedin.com/in/janedoe",
-        "github": "github.com/janedoe"
+        "links": [
+            {
+                "label": "LinkedIn",
+                "url": "http://linkedin.com/in/anikaszuppa"
+            },
+            { "label": "GitHub", "url": "http://github.com/anszu" },
+            { "label": "CV", "url": "https://anszu.github.io/" }
+        ]
     },
     "summary": "Passionate frontend developer with 5+ years of experience building responsive and user-friendly web applications using React, TypeScript, and modern UI frameworks. Adept at collaborating in agile teams and delivering high-quality code.",
     "experience": [
