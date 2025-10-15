@@ -3,7 +3,7 @@ export type HeadingData = ContentType['heading'];
 
 export const Heading = ({ data }: { data: HeadingData }) => (
     <header className="border-b border-gray-700 pb-4">
-        <h1 className="text-3xl font-bold">{data.title}</h1>
+        <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
         <h2>{data.subtitle}</h2>
     </header>
 );

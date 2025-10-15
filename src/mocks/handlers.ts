@@ -21,6 +21,12 @@ export const handlers = [
             },
             summary:
                 'Passionate frontend developer with 5+ years building responsive apps with React, TypeScript and modern tooling.',
+            skills: [
+                {
+                    label: 'Skills',
+                    text: 'HTML5, CSS3 (SASS, SCSS, CSS Modules)',
+                },
+            ],
             experience: [
                 {
                     company: 'Tech Solutions Ltd.',
@@ -50,14 +56,6 @@ export const handlers = [
                     degree: 'MSc Computer Science',
                     year: '2017',
                 },
-            ],
-            skills: [
-                'React',
-                'TypeScript',
-                'Tailwind CSS',
-                'Jest',
-                'Storybook',
-                'Accessibility',
             ],
             projects: [
                 {

@@ -15,9 +15,9 @@
         "icon": "📝"
     },
     {
-        "id": "tldr",
-        "title": "TL;DR",
-        "icon": "⚡"
+        "id": "skills",
+        "title": "Skills",
+        "icon": "💻"
     },
     {
         "id": "experience",
@@ -28,11 +28,6 @@
         "id": "education",
         "title": "Education",
         "icon": "🎓"
-    },
-    {
-        "id": "skills",
-        "title": "Skills",
-        "icon": "💻"
     },
     {
         "id": "projects",

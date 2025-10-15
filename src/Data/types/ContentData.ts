@@ -11,6 +11,7 @@ export interface ContentType {
         links: { label: string; url: string }[];
     };
     summary: string;
+    skills: { label: string; text: string }[];
     experience: {
         company: string;
         position: string;
@@ -23,7 +24,6 @@ export interface ContentType {
         degree: string;
         year: string;
     }[];
-    skills: string[];
     projects: {
         name: string;
         description: string;

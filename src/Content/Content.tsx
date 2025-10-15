@@ -4,7 +4,6 @@ import type { ContentType } from 'src/Data/types/ContentData';
 import { Heading } from 'src/Content/Heading';
 import { Contact } from 'src/Content/Contact';
 import { Summary } from 'src/Content/Summary';
-import { Tldr } from 'src/Content/Tldr';
 import { Experience } from 'src/Content/Experience';
 import { Education } from 'src/Content/Education';
 import { Skills } from 'src/Content/Skills';
@@ -29,14 +28,12 @@ export const Content = ({ contentId }: { contentId: SectionId }) => {
             return <Contact data={data.contact} />;
         case 'summary':
             return <Summary data={data.summary} />;
-        case 'tldr':
-            return <Tldr data={data.summary} />;
+        case 'skills':
+            return <Skills data={data.skills} />;
         case 'experience':
             return <Experience data={data.experience} />;
         case 'education':
             return <Education data={data.education} />;
-        case 'skills':
-            return <Skills data={data.skills} />;
         case 'projects':
             return <Projects data={data.projects} />;
         case 'certificates':
