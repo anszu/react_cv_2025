@@ -16,7 +16,9 @@ import { Referees } from 'src/Content/Referees';
 type ContentById = { [K in keyof ContentType]: ContentType[K] };
 
 export const Content = ({ contentId }: { contentId: SectionId }) => {
-    const { data } = useData<ContentById>('/Data/json/content.json');
+    const { data } = useData<ContentById>(
+        'src/Data/json/content_anikaszuppa.json',
+    );
 
     if (!data) return null;
 
