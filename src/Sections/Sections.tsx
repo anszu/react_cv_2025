@@ -4,9 +4,9 @@ import { Section } from 'src/Sections/Section';
 
 export const Sections = () => {
     const { data } = useData<SectionData>(
-        '/Data/json/sections_anikaszuppa.json',
+        'src/Data/json/sections_anikaszuppa.json',
     );
-
+    console.log('Sections data:', data);
     if (!data) return null;
 
     return (
