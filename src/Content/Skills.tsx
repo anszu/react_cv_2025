@@ -2,9 +2,12 @@ import type { ContentType } from 'src/Data/types/ContentData';
 type SkillsData = ContentType['skills'];
 
 export const Skills = ({ data }: { data: SkillsData }) => (
-    <ul>
-        {data.map((s, i) => (
-            <li key={i}>{s}</li>
+    <div>
+        {data?.map((item, index) => (
+            <div key={index} className="mb-4">
+                <h3 className="mb-4 font-bold">{item.label}:</h3>
+                <p>{item.text}</p>
+            </div>
         ))}
-    </ul>
+    </div>
 );

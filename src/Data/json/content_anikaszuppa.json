@@ -14,7 +14,33 @@
             { "label": "CV", "url": "https://anszu.github.io/" }
         ]
     },
-    "summary": "Passionate frontend developer with 5+ years of experience building responsive and user-friendly web applications using React, TypeScript, and modern UI frameworks. Adept at collaborating in agile teams and delivering high-quality code.",
+    "summary": "I’m a passionate frontend developer with over 15 years of experience building popular, high-traffic web applications. I specialize in creating responsive, user-friendly, and accessible interfaces using React, TypeScript, and modern UI frameworks. I enjoy collaborating in agile teams and leveraging AI-supported tools to deliver high-quality, well-structured, and maintainable code.",
+    "skills": [
+        {
+            "label": "Experience",
+            "text": "15+ years in web development, with 7+ years specializing in React, TypeScript, Redux and other modern frontend technologies."
+        },
+        {
+            "label": "UX & Design",
+            "text": "Keen eye for clean UI design, usability, and user-centric interfaces using modern CSS Frameworks like TailwindCSS and Material UI."
+        },
+        {
+            "label": "Testing",
+            "text": "Strong focus on unit and integration testing using Jest, Vitest, Storybook, and React Testing Library."
+        },
+        {
+            "label": "Architecture",
+            "text": "Experienced in component-driven development, modular architecture, and maintaining scalable frontend codebases."
+        },
+        {
+            "label": "Tooling, Build & Operations",
+            "text": "Hands-on experience with modern bundling and build tools, including Webpack, Vite, and NPM/Yarn-based workflows, as well as leveraging AI-assisted tools to enhance development efficiency and code quality. Familiar with CI/CD pipelines, Git workflows, and version control."
+        },
+        {
+            "label": "Approach",
+            "text": "Dedicated to responsive design, accessibility (WCAG standards), SEO best practices, and performance optimization."
+        }
+    ],
     "experience": [
         {
             "company": "Tech Solutions Ltd.",
@@ -45,14 +71,6 @@
             "degree": "Bachelor of Science in Computer Science",
             "year": "2017"
         }
-    ],
-    "skills": [
-        "HTML5, CSS3 (SASS, SCSS, CSS Modules)",
-        "JavaScript (ES6+), TypeScript",
-        "React, Redux, Next.js",
-        "Jest, React Testing Library, Storybook",
-        "Responsive Design, Accessibility, SEO",
-        "Agile (Scrum, Kanban)"
     ],
     "projects": [
         {

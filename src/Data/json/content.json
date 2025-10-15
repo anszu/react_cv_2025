@@ -49,12 +49,7 @@
         }
     ],
     "skills": [
-        "HTML5, CSS3 (SASS, SCSS, CSS Modules)",
-        "JavaScript (ES6+), TypeScript",
-        "React, Redux, Next.js",
-        "Jest, React Testing Library, Storybook",
-        "Responsive Design, Accessibility, SEO",
-        "Agile (Scrum, Kanban)"
+        { "label": "Skills", "text": "HTML5, CSS3 (SASS, SCSS, CSS Modules)" }
     ],
     "projects": [
         {
