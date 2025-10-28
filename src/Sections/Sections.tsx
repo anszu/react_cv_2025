@@ -6,7 +6,7 @@ export const Sections = () => {
     const { data } = useData<SectionData>(
         'src/Data/json/sections_anikaszuppa.json',
     );
-    console.log('Sections data:', data);
+
     if (!data) return null;
 
     return (
