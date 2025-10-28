@@ -35,9 +35,9 @@ export const Summary: Story = {
     },
 };
 
-export const Tldr: Story = {
+export const Skills: Story = {
     args: {
-        contentId: 'tldr',
+        contentId: 'skills',
     },
 };
 
@@ -50,12 +50,6 @@ export const Experience: Story = {
 export const Education: Story = {
     args: {
         contentId: 'education',
-    },
-};
-
-export const Skills: Story = {
-    args: {
-        contentId: 'skills',
     },
 };
 

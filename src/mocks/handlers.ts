@@ -53,8 +53,19 @@ export const handlers = [
             education: [
                 {
                     school: 'University of Example',
+                    location: 'Germany',
+                    link: 'https://www.example.com',
                     degree: 'MSc Computer Science',
                     year: '2017',
+                },
+                {
+                    school: 'Institute of Sample Studies',
+                    degree: 'BSc Information Technology',
+                    year: '2020',
+                },
+                {
+                    degree: 'PhD Data Science',
+                    location: 'Austria',
                 },
             ],
             projects: [

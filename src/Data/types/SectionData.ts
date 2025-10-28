@@ -4,7 +4,6 @@ export type SectionId =
     | 'heading'
     | 'contact'
     | 'summary'
-    | 'tldr'
     | 'experience'
     | 'education'
     | 'skills'

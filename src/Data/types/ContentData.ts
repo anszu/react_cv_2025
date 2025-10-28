@@ -23,6 +23,8 @@ export interface ContentType {
         school: string;
         degree: string;
         year: string;
+        link: string;
+        location: string;
     }[];
     projects: {
         name: string;
