@@ -12,7 +12,9 @@ export const useData = <T = DataType>(dataSrc: string) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(dataSrc);
+                const response = await fetch(
+                    import.meta.env.BASE_URL + 'json/' + dataSrc,
+                );
 
                 if (!response.ok) {
                     throw Error(
