@@ -30,13 +30,13 @@ Open [http://localhost:5173](http://localhost:5173) to view the app.
 ## 🌍 Live Version
 
 You can view the live CV here:
-👉 **[https://anszu.github.io](https://anszu.github.io)**
+👉 **[https://anszu.github.io/react_cv_2025](https://anszu.github.io/react_cv_2025)**
 
 ## 👩‍💻 About Me
 
 **Anika Szuppa**  
 Senior Frontend Developer  
 (React Development & Modern Frontend Architecture)  
-Berlin, Germany  
+Berlin, Germany
 
 📎 [LinkedIn](https://linkedin.com/in/anikaszuppa)
