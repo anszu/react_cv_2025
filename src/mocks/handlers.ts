@@ -26,11 +26,17 @@ export const handlers = [
                     label: 'Skills',
                     text: 'HTML5, CSS3 (SASS, SCSS, CSS Modules)',
                 },
+                {
+                    label: 'More',
+                    text: 'Willing to learn and adapt quickly to new requiements.',
+                },
             ],
             experience: [
                 {
                     company: 'Tech Solutions Ltd.',
                     position: 'Frontend Developer',
+                    link: 'www.techsolutions.com',
+                    description: 'Provider fro great tech solutions.',
                     location: 'Berlin, Germany',
                     period: '2021 – Present',
                     tasks: [
@@ -81,9 +87,6 @@ export const handlers = [
                     link: 'https://github.com/janedoe/ecommerce-demo',
                 },
             ],
-            certificates: [
-                { name: 'AWS Certified Cloud Practitioner', year: '2023' },
-            ],
             volunteering: [
                 {
                     organization: 'Code Club',
@@ -100,12 +103,10 @@ export const handlers = [
             { id: 'heading', title: 'Heading' },
             { id: 'contact', title: 'Contact', icon: '📞' },
             { id: 'summary', title: 'Summary', icon: '📝' },
-            { id: 'tldr', title: 'TL;DR', icon: '⚡' },
             { id: 'experience', title: 'Experience', icon: '💼' },
             { id: 'education', title: 'Education', icon: '🎓' },
             { id: 'skills', title: 'Skills', icon: '🛠️' },
             { id: 'projects', title: 'Projects', icon: '🚀' },
-            { id: 'certificates', title: 'Certificates', icon: '📜' },
             { id: 'volunteering', title: 'Volunteering', icon: '🤝' },
             { id: 'referees', title: 'Referees', icon: '👥' },
         ]);

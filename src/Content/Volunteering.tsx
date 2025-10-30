@@ -2,16 +2,19 @@ import type { ContentType } from 'src/Data/types/ContentData';
 type VolunteeringData = ContentType['volunteering'];
 
 export const Volunteering = ({ data }: { data: VolunteeringData }) => (
-    <section>
+    <div>
         {data.map((v, i) => (
             <div key={`${v.organization}-${i}`}>
-                <strong>{v.role}</strong> — {v.organization} ({v.period})
-                <ul>
+                <h3 className="font-bold">{v.role}</h3>
+                <p className="mb-4 text-sm text-gray-500">
+                    {v.organization} ({v.period})
+                </p>
+                <ul className="italic text-sm">
                     {v.tasks.map((t, j) => (
                         <li key={j}>{t}</li>
                     ))}
                 </ul>
             </div>
         ))}
-    </section>
+    </div>
 );

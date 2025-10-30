@@ -59,12 +59,6 @@ export const Projects: Story = {
     },
 };
 
-export const Certificates: Story = {
-    args: {
-        contentId: 'certificates',
-    },
-};
-
 export const Volunteering: Story = {
     args: {
         contentId: 'volunteering',

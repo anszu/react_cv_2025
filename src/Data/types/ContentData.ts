@@ -14,6 +14,8 @@ export interface ContentType {
     skills: { label: string; text: string }[];
     experience: {
         company: string;
+        description: string;
+        link: string;
         position: string;
         location: string;
         period: string;

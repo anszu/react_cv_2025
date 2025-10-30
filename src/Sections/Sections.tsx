@@ -3,14 +3,12 @@ import type { SectionType, SectionData } from 'src/Data/types/SectionData';
 import { Section } from 'src/Sections/Section';
 
 export const Sections = () => {
-    const { data } = useData<SectionData>(
-        'src/Data/json/sections_anikaszuppa.json',
-    );
+    const { data } = useData<SectionData>('src/Data/json/sections.json');
 
     if (!data) return null;
 
     return (
-        <div className="flex flex-col gap-10 md:gap-12">
+        <div className="flex flex-col gap-8 md:gap-10">
             {data.map((section: SectionType) => (
                 <Section key={section.id} {...section} />
             ))}
