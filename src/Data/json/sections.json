@@ -1,18 +1,16 @@
 [
     {
-        "id": "heading",
-        "title": "CV Jane Doe",
-        "icon": ""
+        "id": "heading"
     },
     {
         "id": "contact",
         "title": "Contact Details",
-        "icon": "📞"
+        "icon": "✉️"
     },
     {
         "id": "summary",
         "title": "Professional Summary",
-        "icon": "📝"
+        "icon": "👩‍💻"
     },
     {
         "id": "skills",
@@ -35,11 +33,6 @@
         "icon": "📂"
     },
     {
-        "id": "certificates",
-        "title": "Certifications",
-        "icon": "🏅"
-    },
-    {
         "id": "volunteering",
         "title": "Volunteering",
         "icon": "🤝"
@@ -47,6 +40,6 @@
     {
         "id": "referees",
         "title": "Referees",
-        "icon": "📇"
+        "icon": "👩‍💼"
     }
 ]

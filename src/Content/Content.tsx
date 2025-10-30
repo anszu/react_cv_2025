@@ -8,16 +8,13 @@ import { Experience } from 'src/Content/Experience';
 import { Education } from 'src/Content/Education';
 import { Skills } from 'src/Content/Skills';
 import { Projects } from 'src/Content/Projects';
-import { Certificates } from 'src/Content/Certificates';
 import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
 
 type ContentById = { [K in keyof ContentType]: ContentType[K] };
 
 export const Content = ({ contentId }: { contentId: SectionId }) => {
-    const { data } = useData<ContentById>(
-        'src/Data/json/content_anikaszuppa.json',
-    );
+    const { data } = useData<ContentById>('src/Data/json/content.json');
 
     if (!data) return null;
 
@@ -36,8 +33,6 @@ export const Content = ({ contentId }: { contentId: SectionId }) => {
             return <Education data={data.education} />;
         case 'projects':
             return <Projects data={data.projects} />;
-        case 'certificates':
-            return <Certificates data={data.certificates} />;
         case 'volunteering':
             return <Volunteering data={data.volunteering} />;
         case 'referees':
