@@ -11,7 +11,7 @@ export const Contact = ({ data }: { data: ContactData }) => (
                     <div className="min-w-32 mr-4">{link.label}: </div>
                     <a
                         href={link.url}
-                        className="underline hover:text-blue-500 hover:no-underline"
+                        className="underline overflow-hidden text-ellipsis hover:text-blue-500 hover:no-underline"
                     >
                         {link.url}
                     </a>
