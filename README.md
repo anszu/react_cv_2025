@@ -34,9 +34,9 @@ You can view the live CV here:
 
 ## 👩‍💻 About Me
 
-**Anika Szuppa**
-Senior Frontend Developer
-(React Development & Modern Frontend Architecture)
-Berlin, Germany
+**Anika Szuppa**  
+Senior Frontend Developer  
+(React Development & Modern Frontend Architecture)  
+Berlin, Germany  
 
 📎 [LinkedIn](https://linkedin.com/in/anikaszuppa)
