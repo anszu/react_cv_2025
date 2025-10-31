@@ -1,5 +1,4 @@
 import type { SectionId } from 'src/Data/types/SectionData';
-import { useData } from 'src/Data/hooks/useData';
 import type { ContentType } from 'src/Data/types/ContentData';
 import { Heading } from 'src/Content/Heading';
 import { Contact } from 'src/Content/Contact';
@@ -10,11 +9,12 @@ import { Skills } from 'src/Content/Skills';
 import { Projects } from 'src/Content/Projects';
 import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
-
-type ContentById = { [K in keyof ContentType]: ContentType[K] };
+import { useDataContext } from 'src/Data/hooks/useDataContext';
 
 export const Content = ({ contentId }: { contentId: SectionId }) => {
-    const { data } = useData<ContentById>('content.json');
+    const { contentData: data } = useDataContext<{
+        contentData?: ContentType;
+    }>();
 
     if (!data) return null;
 
