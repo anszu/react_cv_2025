@@ -1,4 +1,4 @@
-# 🌐 React CV 2025 — Anika Szuppa
+# 🌐 React CV — Anika Szuppa
 
 This project transforms my CV into a living example of my work — showcasing my approach to:
 
