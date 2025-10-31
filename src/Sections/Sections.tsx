@@ -1,9 +1,11 @@
-import { useData } from 'src/Data/hooks/useData';
-import type { SectionType, SectionData } from 'src/Data/types/SectionData';
+import { useDataContext } from 'src/Data/hooks/useDataContext';
+import type { SectionType } from 'src/Data/types/SectionData';
 import { Section } from 'src/Sections/Section';
 
 export const Sections = () => {
-    const { data } = useData<SectionData>('sections.json');
+    const { sectionData: data } = useDataContext<{
+        sectionData?: SectionType[];
+    }>();
 
     if (!data) return null;
 
