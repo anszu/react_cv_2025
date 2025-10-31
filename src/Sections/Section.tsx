@@ -6,10 +6,12 @@ export const Section = ({ id, title, icon }: SectionType) => {
 
     return (
         <section key={id}>
-            <div className="text-xl font-semibold mb-4 flex text-gray-900">
-                {iconElement}
-                <h2>{title}</h2>
-            </div>
+            {title && (
+                <div className="text-xl font-semibold mb-4 flex text-gray-900">
+                    {iconElement}
+                    <h2>{title}</h2>
+                </div>
+            )}
             <div className="text-gray-700">
                 <Content contentId={id} />
             </div>

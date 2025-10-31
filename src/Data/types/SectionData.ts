@@ -10,7 +10,8 @@ export type SectionId =
     | 'projects'
     | 'certificates'
     | 'volunteering'
-    | 'referees';
+    | 'referees'
+    | 'match';
 
 export interface SectionType {
     id: SectionId;

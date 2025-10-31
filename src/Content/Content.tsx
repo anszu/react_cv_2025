@@ -10,6 +10,7 @@ import { Skills } from 'src/Content/Skills';
 import { Projects } from 'src/Content/Projects';
 import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
+import { Match } from 'src/Match/Match';
 
 type ContentById = { [K in keyof ContentType]: ContentType[K] };
 
@@ -37,6 +38,8 @@ export const Content = ({ contentId }: { contentId: SectionId }) => {
             return <Volunteering data={data.volunteering} />;
         case 'referees':
             return <Referees data={data.referees} />;
+        case 'match':
+            return <Match />;
         default:
             return null;
     }
