@@ -1,13 +1,14 @@
 import { http, HttpResponse } from 'msw';
+import { SectionId } from 'src/Data/types/SectionData';
 
 export const handlers = [
     http.get(/content(?:_.*)?\.json$/, () => {
         return HttpResponse.json({
-            heading: {
+            [SectionId.HEADING]: {
                 title: 'Frontend Developer',
                 subtitle: 'Specialized in React & Modern JavaScript',
             },
-            contact: {
+            [SectionId.CONTACT]: {
                 name: 'Jane Doe',
                 phone: '+49 123 456 789',
                 links: [
@@ -19,9 +20,9 @@ export const handlers = [
                     { label: 'GitHub', url: 'https://github.com/janedoe' },
                 ],
             },
-            summary:
+            [SectionId.SUMMARY]:
                 'Passionate frontend developer with 5+ years building responsive apps with React, TypeScript and modern tooling.',
-            skills: [
+            [SectionId.SKILLS]: [
                 {
                     label: 'Skills',
                     text: 'HTML5, CSS3 (SASS, SCSS, CSS Modules)',
@@ -31,7 +32,7 @@ export const handlers = [
                     text: 'Willing to learn and adapt quickly to new requiements.',
                 },
             ],
-            experience: [
+            [SectionId.EXPERIENCE]: [
                 {
                     company: 'Tech Solutions Ltd.',
                     position: 'Frontend Developer',
@@ -56,7 +57,7 @@ export const handlers = [
                     ],
                 },
             ],
-            education: [
+            [SectionId.EDUCATION]: [
                 {
                     school: 'University of Example',
                     location: 'Germany',
@@ -74,7 +75,7 @@ export const handlers = [
                     location: 'Austria',
                 },
             ],
-            projects: [
+            [SectionId.PROJECTS]: [
                 {
                     name: 'Personal Portfolio',
                     description:
@@ -87,7 +88,7 @@ export const handlers = [
                     link: 'https://github.com/janedoe/ecommerce-demo',
                 },
             ],
-            volunteering: [
+            [SectionId.VOLUNTEERING]: [
                 {
                     organization: 'Code Club',
                     role: 'Mentor',
@@ -95,20 +96,20 @@ export const handlers = [
                     tasks: ['Mentored students', 'Ran coding workshops'],
                 },
             ],
-            referees: 'References available on request',
+            [SectionId.REFEREES]: 'References available on request',
         });
     }),
     http.get(/sections(?:_.*)?\.json$/, () => {
         return HttpResponse.json([
-            { id: 'heading', title: 'Heading' },
-            { id: 'contact', title: 'Contact', icon: '📞' },
-            { id: 'summary', title: 'Summary', icon: '📝' },
-            { id: 'experience', title: 'Experience', icon: '💼' },
-            { id: 'education', title: 'Education', icon: '🎓' },
-            { id: 'skills', title: 'Skills', icon: '🛠️' },
-            { id: 'projects', title: 'Projects', icon: '🚀' },
-            { id: 'volunteering', title: 'Volunteering', icon: '🤝' },
-            { id: 'referees', title: 'Referees', icon: '👥' },
+            { id: SectionId.HEADING, title: 'Heading' },
+            { id: SectionId.CONTACT, title: 'Contact', icon: '📞' },
+            { id: SectionId.SUMMARY, title: 'Summary', icon: '📝' },
+            { id: SectionId.EXPERIENCE, title: 'Experience', icon: '💼' },
+            { id: SectionId.EDUCATION, title: 'Education', icon: '🎓' },
+            { id: SectionId.SKILLS, title: 'Skills', icon: '🛠️' },
+            { id: SectionId.PROJECTS, title: 'Projects', icon: '🚀' },
+            { id: SectionId.VOLUNTEERING, title: 'Volunteering', icon: '🤝' },
+            { id: SectionId.REFEREES, title: 'Referees', icon: '👥' },
         ]);
     }),
 ];

@@ -2,7 +2,7 @@ import type { ContentType } from 'src/Data/types/ContentData';
 type ProjectsData = ContentType['projects'];
 
 export const Projects = ({ data }: { data: ProjectsData }) => (
-    <div>
+    <div className="space-y-4">
         {data.map((p, i) => (
             <div key={`${p.name}-${i}`}>
                 <h3 className="font-bold">{p.name}</h3>
