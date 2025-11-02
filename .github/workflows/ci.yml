@@ -34,9 +34,12 @@ jobs:
             - name: Run CI
               run: npm run ci
 
-            - name: Deploy to github pages
+            - name: Deploy Main Site
               if: ${{ success() }}
-              run: npm run deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GH_PAGES_TOKEN }}
+                  publish_dir: ./dist
 
             - name: Deploy storybook
               if: ${{ success() }}
@@ -46,6 +49,6 @@ jobs:
               if: ${{ success() }}
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  github_token: ${{ secrets.GH_PAGES_TOKEN }}
                   publish_dir: ./storybook-static
                   destination_dir: storybook
