@@ -33,3 +33,7 @@ jobs:
 
             - name: Run CI
               run: npm run ci
+
+            - name: Deploy to github pages
+              if: ${{ success() }}
+              run: npm run deploy
