@@ -32,6 +32,11 @@ Open [http://localhost:5173](http://localhost:5173) to view the app.
 You can view the live CV here:
 👉 **[https://anszu.github.io/react_cv_2025](https://anszu.github.io/react_cv_2025)**
 
+## 📕 Storybook
+
+You can view the Storybook build here:
+👉 **[https://anszu.github.io/react_cv_2025/storybook](https://anszu.github.io/react_cv_2025/storybook)**
+
 ## 👩‍💻 About Me
 
 **Anika Szuppa**  
