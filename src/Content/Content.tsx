@@ -11,7 +11,6 @@ import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
 import { useDataContext } from 'src/Data/hooks/useDataContext';
 import { LoadingSpinner } from 'src/LoadingSpinner';
-import { Match } from 'src/Match/Match';
 
 export const Content = ({ sectionId }: { sectionId: SectionId }) => {
     const { contentData: data, contentLoading: loading } = useDataContext<{
@@ -48,10 +47,6 @@ export const Content = ({ sectionId }: { sectionId: SectionId }) => {
             return <Volunteering data={data.volunteering} />;
         case SectionId.REFEREES:
             return <Referees data={data.referees} />;
-        /*    
-        case SectionId.MATCH:
-            return <Match />;
-        */
         default:
             return null;
     }
