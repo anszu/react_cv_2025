@@ -48,8 +48,10 @@ export const Content = ({ sectionId }: { sectionId: SectionId }) => {
             return <Volunteering data={data.volunteering} />;
         case SectionId.REFEREES:
             return <Referees data={data.referees} />;
+        /*    
         case SectionId.MATCH:
             return <Match />;
+        */
         default:
             return null;
     }
