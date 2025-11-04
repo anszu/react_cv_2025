@@ -32,11 +32,14 @@ export const Match = () => {
                 return r.json();
             });
 
-            const response = await fetch('http://localhost:3001/api/ask', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ cvData, jobDescription }),
-            });
+            const response = await fetch(
+                'https://react-cv-2025.onrender.com/api/ask',
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cvData, jobDescription }),
+                },
+            );
 
             if (!response.ok) {
                 throw new Error('Server responded with an error');
