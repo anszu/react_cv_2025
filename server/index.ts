@@ -9,6 +9,8 @@ import { errorHandler } from './middleware/errorHandler';
 import { asyncHandler } from './utils/asyncHandler';
 import OpenAI from 'openai';
 
+const PORT = process.env.PORT || 3001;
+
 const RequestSchema = z.object({
     cvData: z.record(z.string(), z.any()),
     jobDescription: z.string().min(10),
@@ -54,6 +56,6 @@ app.post(
 // Global error handler
 app.use(errorHandler);
 
-app.listen(3001, () => {
-    console.log('✅ Server running on http://localhost:3001');
+app.listen(PORT, () => {
+    console.log(`✅ Server running on http://localhost:${PORT}`);
 });

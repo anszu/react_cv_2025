@@ -6,6 +6,13 @@
         "esModuleInterop": true,
         "strict": true,
         "outDir": "./dist",
-        "rootDir": "./"
-    }
+        "rootDir": "./",
+        "skipLibCheck": true
+    },
+    "include": [
+        "*.ts",
+        "prompts/**/*.ts",
+        "utils/**/*.ts",
+        "middleware/**/*.ts"
+    ]
 }
