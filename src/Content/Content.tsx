@@ -1,5 +1,4 @@
-import type { SectionId } from 'src/Data/types/SectionData';
-import { useData } from 'src/Data/hooks/useData';
+import { SectionId } from 'src/Data/types/SectionData';
 import type { ContentType } from 'src/Data/types/ContentData';
 import { Heading } from 'src/Content/Heading';
 import { Contact } from 'src/Content/Contact';
@@ -10,35 +9,46 @@ import { Skills } from 'src/Content/Skills';
 import { Projects } from 'src/Content/Projects';
 import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
+import { useDataContext } from 'src/Data/hooks/useDataContext';
+import { LoadingSpinner } from 'src/LoadingSpinner';
 import { Match } from 'src/Match/Match';
 
-type ContentById = { [K in keyof ContentType]: ContentType[K] };
-
-export const Content = ({ contentId }: { contentId: SectionId }) => {
-    const { data } = useData<ContentById>('content.json');
+export const Content = ({ sectionId }: { sectionId: SectionId }) => {
+    const { contentData: data, contentLoading: loading } = useDataContext<{
+        contentData?: ContentType;
+        contentLoading: boolean;
+    }>();
 
     if (!data) return null;
 
-    switch (contentId) {
-        case 'heading':
+    if (loading) {
+        return (
+            <div className="flex w-full justify-center">
+                <LoadingSpinner />
+            </div>
+        );
+    }
+
+    switch (sectionId) {
+        case SectionId.HEADING:
             return <Heading data={data.heading} />;
-        case 'contact':
+        case SectionId.CONTACT:
             return <Contact data={data.contact} />;
-        case 'summary':
+        case SectionId.SUMMARY:
             return <Summary data={data.summary} />;
-        case 'skills':
+        case SectionId.SKILLS:
             return <Skills data={data.skills} />;
-        case 'experience':
+        case SectionId.EXPERIENCE:
             return <Experience data={data.experience} />;
-        case 'education':
+        case SectionId.EDUCATION:
             return <Education data={data.education} />;
-        case 'projects':
+        case SectionId.PROJECTS:
             return <Projects data={data.projects} />;
-        case 'volunteering':
+        case SectionId.VOLUNTEERING:
             return <Volunteering data={data.volunteering} />;
-        case 'referees':
+        case SectionId.REFEREES:
             return <Referees data={data.referees} />;
-        case 'match':
+        case SectionId.MATCH:
             return <Match />;
         default:
             return null;

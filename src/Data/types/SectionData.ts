@@ -1,17 +1,19 @@
 export type SectionData = SectionType[];
 
-export type SectionId =
-    | 'heading'
-    | 'contact'
-    | 'summary'
-    | 'experience'
-    | 'education'
-    | 'skills'
-    | 'projects'
-    | 'certificates'
-    | 'volunteering'
-    | 'referees'
-    | 'match';
+export const SectionId = {
+    HEADING: 'heading',
+    CONTACT: 'contact',
+    SUMMARY: 'summary',
+    EXPERIENCE: 'experience',
+    EDUCATION: 'education',
+    SKILLS: 'skills',
+    PROJECTS: 'projects',
+    VOLUNTEERING: 'volunteering',
+    REFEREES: 'referees',
+    MATCH: 'match',
+} as const;
+
+export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 export interface SectionType {
     id: SectionId;

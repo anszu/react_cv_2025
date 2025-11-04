@@ -1,4 +1,4 @@
-# 🌐 React CV 2025 — Anika Szuppa
+# 🌐 React CV — Anika Szuppa
 
 This project transforms my CV into a living example of my work — showcasing my approach to:
 
@@ -31,6 +31,11 @@ Open [http://localhost:5173](http://localhost:5173) to view the app.
 
 You can view the live CV here:
 👉 **[https://anszu.github.io/react_cv_2025](https://anszu.github.io/react_cv_2025)**
+
+## 📕 Storybook
+
+You can view the Storybook build here:
+👉 **[https://anszu.github.io/react_cv_2025/storybook](https://anszu.github.io/react_cv_2025/storybook)**
 
 ## 👩‍💻 About Me
 

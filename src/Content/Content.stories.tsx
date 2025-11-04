@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Content } from 'src/Content/Content';
-import type { SectionId } from 'src/Data/types/SectionData';
+import { DataContext } from 'src/Data/DataContext';
+import { SectionId } from 'src/Data/types/SectionData';
 
 const meta: Meta<typeof Content> = {
     title: 'Content',
@@ -11,62 +12,81 @@ export default meta;
 
 type Story = StoryObj<typeof Content>;
 
-export const Default: Story = {
-    args: {
-        contentId: 'non_existent_section' as unknown as SectionId,
-    },
+const mockProviderValue = {
+    contentData: [],
+    contentError: null,
+    contentLoading: false,
+    sectionData: [],
+    sectionLoading: false,
+    sectionError: null,
+};
+
+export const Loading: Story = {
+    render: () => (
+        <DataContext.Provider
+            value={{ ...mockProviderValue, contentLoading: true }}
+        >
+            <Content sectionId={SectionId.EXPERIENCE} />
+        </DataContext.Provider>
+    ),
 };
 
 export const Heading: Story = {
     args: {
-        contentId: 'heading',
+        sectionId: SectionId.HEADING,
     },
 };
 
 export const Contact: Story = {
     args: {
-        contentId: 'contact',
+        sectionId: SectionId.CONTACT,
     },
 };
 
 export const Summary: Story = {
     args: {
-        contentId: 'summary',
+        sectionId: SectionId.SUMMARY,
     },
 };
 
 export const Skills: Story = {
     args: {
-        contentId: 'skills',
+        sectionId: SectionId.SKILLS,
     },
 };
 
 export const Experience: Story = {
     args: {
-        contentId: 'experience',
+        sectionId: SectionId.EXPERIENCE,
     },
 };
 
 export const Education: Story = {
     args: {
-        contentId: 'education',
+        sectionId: SectionId.EDUCATION,
     },
 };
 
 export const Projects: Story = {
     args: {
-        contentId: 'projects',
+        sectionId: SectionId.PROJECTS,
     },
 };
 
 export const Volunteering: Story = {
     args: {
-        contentId: 'volunteering',
+        sectionId: SectionId.VOLUNTEERING,
     },
 };
 
 export const Referees: Story = {
     args: {
-        contentId: 'referees',
+        sectionId: SectionId.REFEREES,
+    },
+};
+
+export const NonExistentSectionId: Story = {
+    args: {
+        sectionId: 'non_existent_section' as unknown as SectionId,
     },
 };

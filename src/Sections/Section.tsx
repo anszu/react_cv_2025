@@ -13,7 +13,7 @@ export const Section = ({ id, title, icon }: SectionType) => {
                 </div>
             )}
             <div className="text-gray-700">
-                <Content contentId={id} />
+                <Content sectionId={id} />
             </div>
         </section>
     );
