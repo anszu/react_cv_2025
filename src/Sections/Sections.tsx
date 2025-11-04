@@ -12,7 +12,7 @@ export const Sections = () => {
     if (!data) return null;
 
     return (
-        <div className="flex flex-col gap-10 print:gap-4 bg-white ">
+        <div className="flex flex-col gap-8 print:gap-6 bg-white ">
             {loading && (
                 <div className="flex w-full justify-center">
                     <LoadingSpinner />

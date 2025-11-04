@@ -2,11 +2,11 @@ import type { ContentType } from 'src/Data/types/ContentData';
 type ExperienceData = ContentType['experience'];
 
 export const Experience = ({ data }: { data: ExperienceData }) => (
-    <ul className="flex flex-col gap-6 print:gap-3">
+    <ul className="flex flex-col gap-6 print:gap-4">
         {data.map((item, i) => (
             <li
                 key={`${item.company}-${item.position}-${i}`}
-                className="flex flex-col gap-4 print:gap-2 print:break-inside-avoid print:last:mb-0"
+                className="flex flex-col gap-3 print:last:mb-0"
             >
                 <h3 className="font-bold">
                     {item.position} —{' '}
@@ -29,14 +29,9 @@ export const Experience = ({ data }: { data: ExperienceData }) => (
                     <p className="italic text-sm">{item.description}</p>
                 )}
 
-                <ul className="list-disc pl-4 print:last:mb-0 print:break-inside-avoid">
+                <ul className="list-disc pl-4 print:last:mb-0">
                     {item.tasks.map((t, j) => (
-                        <li
-                            key={j}
-                            className="mb-2 last:mb-0 print:mb-1 print:last:mb-0"
-                        >
-                            {t}
-                        </li>
+                        <li key={j}>{t}</li>
                     ))}
                 </ul>
             </li>
