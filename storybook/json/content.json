@@ -1,0 +1,122 @@
+{
+    "heading": {
+        "title": "CV Anika Szuppa",
+        "subtitle": "Senior Frontend Developer (React Development & Modern Frontend Architecture)"
+    },
+    "contact": {
+        "name": "Anika Szuppa",
+        "links": [
+            {
+                "label": "LinkedIn",
+                "url": "http://linkedin.com/in/anikaszuppa"
+            },
+            { "label": "GitHub", "url": "http://github.com/anszu" },
+            { "label": "CV", "url": "https://anszu.github.io" },
+            { "label": "Email", "url": "mailto:info@anikaszuppa.de" }
+        ]
+    },
+    "summary": "Passionate frontend developer with 18+ years of experience building high-traffic web applications. Specialized in React, TypeScript and modern frontend architecture. Skilled in responsive, accessible interfaces and collaborative agile workflows.",
+    "skills": [
+        {
+            "label": "Experience",
+            "text": "18+ years in web development, 8+ years in React, TypeScript, Redux and modern frontend technologies."
+        },
+        {
+            "label": "UX & Design",
+            "text": "Clean UI, responsive and accessible interfaces using TailwindCSS and Material UI."
+        },
+        {
+            "label": "Testing",
+            "text": "Unit and integration testing with Jest, Vitest, Storybook and React Testing Library."
+        },
+        {
+            "label": "Architecture",
+            "text": "Component-driven, modular and scalable frontend codebases."
+        },
+        {
+            "label": "Tooling & Build",
+            "text": "Webpack, Vite, NPM/Yarn workflows; CI/CD; Git; AI-assisted tooling."
+        },
+        {
+            "label": "Approach",
+            "text": "Responsive design, accessibility (WCAG), SEO and performance optimization."
+        }
+    ],
+    "experience": [
+        {
+            "company": "orgavision Gmbh",
+            "link": "https://orgavision.com",
+            "description": "Orgavision is a leading B2B provider of integrated management systems (IMS) for quality management, documentation and knowledge sharing.",
+            "position": "Senior Frontend Developer",
+            "location": "Berlin, Germany",
+            "period": "2019 – Present",
+            "tasks": [
+                "Built scalable React apps with functional components, Hooks, Redux/Context API and TypeScript",
+                "Led frontend architecture and state management decisions",
+                "Collaborated with backend teams to integrate REST APIs and worked with UX designers to deliver accessible, user-friendly interfaces"
+            ]
+        },
+        {
+            "company": "DaWanda GmbH",
+            "position": "Senior Frontend Developer",
+            "description": "DaWanda was a popular german, online marketplace for handmade and unique products.",
+            "location": "Berlin, Germany",
+            "period": "2017 – 2018",
+            "tasks": [
+                "Developed high-traffic e-commerce components using React, HTML5, CSS3 and JS (ES6+)",
+                "Led project planning and team coordination"
+            ]
+        },
+        {
+            "company": "Zeit Online GmbH",
+            "position": "Frontend Developer",
+            "link": "https://www.zeit.de",
+            "description": "Zeit Online is a leading German news website (~10 million users a month).",
+            "location": "Hamburg/ Berlin, Germany",
+            "period": "2011 – 2017",
+            "tasks": [
+                "Maintained website scripts, styles, media integrations, SEO optimization and tracking",
+                "Contributed to the Zeit Online relaunch, making it one of the first major German news sites to go fully responsive"
+            ]
+        },
+        {
+            "company": "ebay classifieds GmbH",
+            "position": "Web Developer",
+            "link": "https://www.kleinanzeigen.de",
+            "description": "ebay classifieds (now classifieds) is a leading online classifieds platform.",
+            "location": "Berlin, Germany/ Milan, Italy",
+            "period": "2007 – 2010",
+            "tasks": [
+                "Developed site features using PHP, MySQL, HTML, CSS and JS",
+                "Managed a small developer team"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "Technical University of Applied Sciences Wildau",
+            "location": "Germany",
+            "link": "https://www.th-wildau.de/",
+            "degree": "Diploma in Business Informatics (University of Applied Sciences, Germany)",
+            "year": "2006"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Showcase project React/ Typescript",
+            "description": "This CV was implemented as a showcase project built with React, TypeScript, Storybook, Tailwind and React Testing Library",
+            "link": "https://github.com/anszu/react_cv_2025"
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "WWOOF (Worldwide Opportunities on Organic Farms)",
+            "role": "Volunteer in New Zealand",
+            "period": "2006 - 2007",
+            "tasks": [
+                "Supported local communities on eco-friendly farming projects"
+            ]
+        }
+    ],
+    "referees": "References available on request"
+}
