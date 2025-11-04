@@ -11,8 +11,7 @@
                 "url": "http://linkedin.com/in/anikaszuppa"
             },
             { "label": "GitHub", "url": "http://github.com/anszu" },
-            { "label": "CV", "url": "https://anszu.github.io" },
-            { "label": "Email", "url": "mailto:info@anikaszuppa.de" }
+            { "label": "CV", "url": "https://anszu.github.io" }
         ]
     },
     "summary": "Passionate frontend developer with 18+ years of experience building high-traffic web applications. Specialized in React, TypeScript and modern frontend architecture. Skilled in responsive, accessible interfaces and collaborative agile workflows.",
