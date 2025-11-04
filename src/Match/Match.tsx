@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LoadingSpinner } from 'src/shared/LoadingSpinner';
 
 export const Match = () => {
     const [loading, setLoading] = useState(false);
@@ -90,7 +91,7 @@ export const Match = () => {
                         )}
                         {loading && (
                             <span className="mt-4 flex items-center italic text-gray-500">
-                                <span className="loader mr-2"></span>
+                                <LoadingSpinner />
                                 Analysing the match... 💼🤖
                             </span>
                         )}
@@ -111,26 +112,6 @@ export const Match = () => {
             {!error && !loading && result && (
                 <p className="mt-4 italic text-gray-700">{result}</p>
             )}
-            {/* CSS für Loader */}
-            <style>{`
-                .loader {
-                    border: 3px solid #f3f3f3;
-                    border-top: 3px solid #3498db;
-                    border-radius: 50%;
-                    width: 16px;
-                    height: 16px;
-                    animation: spin 1s linear infinite;
-                }
-
-                @keyframes spin {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-            `}</style>
         </div>
     );
 };

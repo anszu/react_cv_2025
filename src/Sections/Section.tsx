@@ -7,7 +7,7 @@ export const Section = ({ id, title, icon }: SectionType) => {
     return (
         <section key={id}>
             {title && (
-                <div className="text-xl font-semibold mb-4 flex text-gray-900">
+                <div className="text-xl print:text-lg font-semibold mb-4 flex text-gray-900">
                     {iconElement}
                     <h2>{title}</h2>
                 </div>

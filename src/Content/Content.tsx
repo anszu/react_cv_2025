@@ -10,7 +10,7 @@ import { Projects } from 'src/Content/Projects';
 import { Volunteering } from 'src/Content/Volunteering';
 import { Referees } from 'src/Content/Referees';
 import { useDataContext } from 'src/Data/hooks/useDataContext';
-import { LoadingSpinner } from 'src/LoadingSpinner';
+import { LoadingSpinner } from 'src/shared/LoadingSpinner';
 
 export const Content = ({ sectionId }: { sectionId: SectionId }) => {
     const { contentData: data, contentLoading: loading } = useDataContext<{

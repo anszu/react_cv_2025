@@ -4,7 +4,7 @@ type EducationData = ContentType['education'];
 
 export const Education = React.memo(({ data }: { data: EducationData }) => (
     <ul className="flex flex-col gap-4">
-        {data.filter(Boolean).map((edu, i) => (
+        {data?.filter(Boolean).map((edu, i) => (
             <li key={`edu-${i}`}>
                 <h3 className="font-bold">{edu.degree}</h3>
                 {edu.link ? (

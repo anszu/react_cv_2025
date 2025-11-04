@@ -1,6 +1,6 @@
 import { useDataContext } from 'src/Data/hooks/useDataContext';
 import type { SectionType } from 'src/Data/types/SectionData';
-import { LoadingSpinner } from 'src/LoadingSpinner';
+import { LoadingSpinner } from 'src/shared/LoadingSpinner';
 import { Section } from 'src/Sections/Section';
 
 export const Sections = () => {
@@ -12,7 +12,7 @@ export const Sections = () => {
     if (!data) return null;
 
     return (
-        <div className="flex flex-col gap-8 md:gap-10">
+        <div className="flex flex-col gap-10 print:gap-4 bg-white ">
             {loading && (
                 <div className="flex w-full justify-center">
                     <LoadingSpinner />
