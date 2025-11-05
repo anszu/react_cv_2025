@@ -1,20 +1,17 @@
 import type { ContentType } from 'src/Data/types/ContentData';
+import { Link } from 'src/shared/Link';
+
 type ContactData = ContentType['contact'];
 
 export const Contact = ({ data }: { data: ContactData }) => (
-    <div className="space-y-4">
+    <div>
         {data.name && <h3>{data.name}</h3>}
         {data.phone && <div>{data.phone}</div>}
         <address className="not-italic">
             {data?.links.map((link, id) => (
                 <div key={`${link.label}-${id}`} className="flex">
                     <div className="min-w-32 mr-4">{link.label}: </div>
-                    <a
-                        href={link.url}
-                        className="underline overflow-hidden text-ellipsis hover:text-blue-500 hover:no-underline"
-                    >
-                        {link.url}
-                    </a>
+                    <Link href={link.url}>{link.url}</Link>
                 </div>
             ))}
         </address>

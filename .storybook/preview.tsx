@@ -39,8 +39,22 @@ const preview: Preview = {
 export const loaders = [mswLoader];
 
 export const decorators: Decorator[] = [
-    (Story) =>
-        React.createElement(DataProvider, null, React.createElement(Story)),
+    (Story) => (
+        <div
+            style={{
+                backgroundColor: 'white',
+                padding: '1rem',
+                minHeight: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <DataProvider>
+                <Story />
+            </DataProvider>
+        </div>
+    ),
 ];
 
 export default preview;

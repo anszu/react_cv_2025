@@ -1,4 +1,8 @@
 import type { ContentType } from 'src/Data/types/ContentData';
+import { Description } from 'src/shared/Description';
+import { Link } from 'src/shared/Link';
+import { Subtitle } from 'src/shared/Subtitle';
+
 type ExperienceData = ContentType['experience'];
 
 export const Experience = ({ data }: { data: ExperienceData }) => (
@@ -11,22 +15,17 @@ export const Experience = ({ data }: { data: ExperienceData }) => (
                 <h3 className="font-bold">
                     {item.position} —{' '}
                     {item.link ? (
-                        <a
-                            href={item.link}
-                            className="underline hover:text-blue-500 hover:no-underline"
-                        >
-                            {item.company}
-                        </a>
+                        <Link href={item.link}>{item.company}</Link>
                     ) : (
                         <span>{item.company}</span>
                     )}
-                    <span className="block text-sm text-gray-500 font-normal">
+                    <Subtitle>
                         {item.location} • {item.period}
-                    </span>
+                    </Subtitle>
                 </h3>
 
                 {item.description && (
-                    <p className="italic text-sm">{item.description}</p>
+                    <Description description={item.description} />
                 )}
 
                 <ul className="list-disc pl-4 print:last:mb-0">

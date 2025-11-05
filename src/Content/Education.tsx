@@ -1,21 +1,17 @@
 import React from 'react';
 import type { ContentType } from 'src/Data/types/ContentData';
+import { Link } from 'src/shared/Link';
+import { List } from 'src/shared/List';
+
 type EducationData = ContentType['education'];
 
 export const Education = React.memo(({ data }: { data: EducationData }) => (
-    <ul className="flex flex-col gap-4">
+    <List>
         {data?.filter(Boolean).map((edu, i) => (
             <li key={`edu-${i}`}>
                 <h3 className="font-bold">{edu.degree}</h3>
                 {edu.link ? (
-                    <a
-                        className="block underline hover:text-blue-500 hover:no-underline"
-                        href={edu.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {edu.school}
-                    </a>
+                    <Link href={edu.link}>{edu.school}</Link>
                 ) : (
                     <p>{edu.school}</p>
                 )}
@@ -32,5 +28,5 @@ export const Education = React.memo(({ data }: { data: EducationData }) => (
                 </p>
             </li>
         ))}
-    </ul>
+    </List>
 ));

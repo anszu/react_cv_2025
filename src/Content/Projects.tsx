@@ -1,21 +1,22 @@
 import type { ContentType } from 'src/Data/types/ContentData';
+import { Description } from 'src/shared/Description';
+import { Link } from 'src/shared/Link';
+import { List } from 'src/shared/List';
+
 type ProjectsData = ContentType['projects'];
 
 export const Projects = ({ data }: { data: ProjectsData }) => (
-    <div className="space-y-4">
+    <List>
         {data.map((p, i) => (
-            <div key={`${p.name}-${i}`}>
+            <li key={`${p.name}-${i}`}>
                 <h3 className="font-bold">{p.name}</h3>
                 {p.link && (
-                    <a
-                        href={p.link}
-                        className="block mb-4 underline hover:text-blue-500 hover:no-underline"
-                    >
+                    <Link href={p.link} optionalClasses="mb-4 block">
                         {p.link}
-                    </a>
+                    </Link>
                 )}
-                <p className="italic text-sm">{p.description}</p>
-            </div>
+                <Description description={p.description} />
+            </li>
         ))}
-    </div>
+    </List>
 );
