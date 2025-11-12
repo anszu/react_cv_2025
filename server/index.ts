@@ -9,6 +9,8 @@ import { errorHandler } from './middleware/errorHandler';
 import { asyncHandler } from './utils/asyncHandler';
 import OpenAI from 'openai';
 
+// @todo add testing for the whole server folder: https://github.com/anszu/react_cv_2025/issues/56
+
 const PORT = process.env.PORT || 3001;
 
 const RequestSchema = z.object({

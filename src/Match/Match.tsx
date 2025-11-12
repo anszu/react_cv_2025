@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { LoadingSpinner } from 'src/shared/LoadingSpinner';
 
+// @todo this poc still needs some refactoring: https://github.com/anszu/react_cv_2025/issues/57
+
 export const Match = () => {
     const [loading, setLoading] = useState(false);
     const [showInput, setShowInput] = useState(false);
@@ -66,7 +68,7 @@ export const Match = () => {
                 className="bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors duration-200 cursor-pointer w-full"
             >
                 <span>🧠</span> Wondering if this CV is your next perfect match?
-                Let’s check it out! <span>🤖</span>
+                Let’s check it out!
             </button>
 
             <div
@@ -91,8 +93,10 @@ export const Match = () => {
                         )}
                         {loading && (
                             <span className="mt-4 flex items-center italic text-gray-500">
-                                <LoadingSpinner />
-                                Analysing the match... 💼🤖
+                                <LoadingSpinner size="sm" />
+                                <span className="ml-2">
+                                    Analysing the match... 💼🤖
+                                </span>
                             </span>
                         )}
                     </p>
