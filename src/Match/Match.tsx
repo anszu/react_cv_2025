@@ -64,7 +64,7 @@ export const Match = () => {
     };
 
     return (
-        <div>
+        <div className="print:hidden">
             <button
                 onClick={toggleInput}
                 className="bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors duration-200 cursor-pointer w-full"
