@@ -94,7 +94,7 @@ export const Match = () => {
                             </span>
                         )}
                         {loading && (
-                            <span className="mt-4 flex items-center italic text-gray-500">
+                            <span className="flex items-center italic text-gray-500">
                                 <LoadingSpinner size="sm" />
                                 <span className="ml-2">
                                     Analysing the match... 💼🤖
