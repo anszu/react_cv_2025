@@ -30,7 +30,9 @@ export const Match = () => {
         setLoading(true);
 
         try {
-            const cvData = await fetch('public/json/content.json').then((r) => {
+            const cvData = await fetch(
+                `${import.meta.env.BASE_URL}json/content.json`,
+            ).then((r) => {
                 if (!r.ok) throw new Error('Failed to load CV data');
                 return r.json();
             });
@@ -85,7 +87,7 @@ export const Match = () => {
                     className="w-full p-2 border border-gray-300 rounded h-32 mb-2 mt-2"
                 />
                 <div className="flex flex-row justify-between items-center">
-                    <p>
+                    <div className="mr-4">
                         {error && !loading && (
                             <span className="italic text-red-500">
                                 {result}
@@ -99,7 +101,7 @@ export const Match = () => {
                                 </span>
                             </span>
                         )}
-                    </p>
+                    </div>
                     <button
                         onClick={handleClick}
                         disabled={loading}
