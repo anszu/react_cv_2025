@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 const RequestSchema = z.object({
     cvData: z.record(z.string(), z.any()),
-    jobDescription: z.string().min(10),
+    jobDescription: z.string(),
 });
 
 const app = express();
