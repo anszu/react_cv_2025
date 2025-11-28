@@ -85,6 +85,12 @@ export const Referees: Story = {
     },
 };
 
+export const Match: Story = {
+    args: {
+        sectionId: SectionId.MATCH,
+    },
+};
+
 export const NonExistentSectionId: Story = {
     args: {
         sectionId: 'non_existent_section' as unknown as SectionId,

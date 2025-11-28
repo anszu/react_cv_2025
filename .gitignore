@@ -28,5 +28,3 @@ coverage
 storybook-static
 
 server/.env
-.env
-.env.local

@@ -112,4 +112,9 @@ export const handlers = [
             { id: SectionId.REFEREES, title: 'Referees', icon: '👥' },
         ]);
     }),
+    http.post('http://localhost:3001/api/ask', () => {
+        return HttpResponse.json({
+            answer: 'Based on the provided CV and job description, the candidate appears to be a strong match for the role. Their skills and experience align well with the job requirements, particularly in React development and modern JavaScript frameworks. The candidate has demonstrated the ability to work on scalable applications and lead component library initiatives, which are valuable assets for this position. Overall, I would recommend considering this candidate for further evaluation in the hiring process.',
+        });
+    }),
 ];

@@ -37,6 +37,7 @@ export default defineConfig({
                 test: {
                     globals: true,
                     environment: 'jsdom',
+                    setupFiles: ['src/mocks/setupTests.ts'],
                     include: ['src/**/*.{test,spec}.{ts,tsx,js,jsx}'],
                 },
                 resolve: {
@@ -78,5 +79,15 @@ export default defineConfig({
                 },
             }),
         ],
+    },
+    define: {
+        'import.meta.env.VITE_API_URL': JSON.stringify(
+            'http://localhost:3001/api/ask',
+        ),
+        'import.meta.env.VITE_API_URL_PROD': JSON.stringify(
+            'http://localhost:3001/api/ask',
+        ),
+        'import.meta.env.PROD': false,
+        'import.meta.env.STORYBOOK_MOCK': true,
     },
 });
