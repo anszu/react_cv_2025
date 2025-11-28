@@ -13,6 +13,8 @@ export const useMatchRequest = (cvData: any) => {
         ? import.meta.env.VITE_API_URL_PROD
         : import.meta.env.VITE_API_URL;
 
+    console.log(baseUrl);
+
     const run = async (jobDescription: string) => {
         setError(null);
         setLoading(true);
