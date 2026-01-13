@@ -6,11 +6,10 @@ import { handlers } from '../src/mocks/handlers';
 import { DataProvider } from '../src/Data/DataProvider';
 import type { Decorator } from '@storybook/react';
 
-// Dynamischen Basis-Pfad bestimmen
 const BASE_PATH =
     location.hostname === 'localhost'
-        ? '/' // lokal
-        : '/react_cv_2025/storybook/'; // GitHub Pages Unterpfad
+        ? '/' // local
+        : '/react_cv_2025/storybook/'; // GitHub pages
 
 initialize({
     onUnhandledRequest: 'warn',

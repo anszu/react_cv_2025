@@ -29,6 +29,8 @@ export default defineConfig({
                 'dist',
                 'src/main.tsx',
                 'public',
+                'server/dist',
+                'server/node_modules',
             ],
         },
         projects: [
@@ -37,8 +39,14 @@ export default defineConfig({
                 test: {
                     globals: true,
                     environment: 'jsdom',
-                    setupFiles: ['src/mocks/setupTests.ts'],
-                    include: ['src/**/*.{test,spec}.{ts,tsx,js,jsx}'],
+                    setupFiles: [
+                        'src/mocks/setupTests.ts',
+                        'server/mocks/setupTests.ts',
+                    ],
+                    include: [
+                        'src/**/*.{test,spec}.{ts,tsx,js,jsx}',
+                        'server/**/*.{test,spec}.{ts,tsx,js,jsx}',
+                    ],
                 },
                 resolve: {
                     alias: {

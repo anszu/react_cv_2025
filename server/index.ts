@@ -4,12 +4,10 @@ import 'dotenv/config';
 import { z } from 'zod';
 import { systemPrompt } from './prompts/systemPrompt';
 import { getEvaluationPrompt } from './prompts/getEvaluationPrompt';
-import { getChatCompletion } from './utils/openAiClient';
+import { getChatCompletion } from './utils/getChatCompletion';
 import { errorHandler } from './middleware/errorHandler';
 import { asyncHandler } from './utils/asyncHandler';
 import OpenAI from 'openai';
-
-// @todo add testing for the whole server folder: https://github.com/anszu/react_cv_2025/issues/56
 
 const PORT = process.env.PORT || 3001;
 
@@ -18,7 +16,7 @@ const RequestSchema = z.object({
     jobDescription: z.string(),
 });
 
-const app = express();
+export const app = express();
 app.use(cors());
 app.use(express.json());
 
@@ -59,5 +57,5 @@ app.post(
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-    console.log(`✅ Server running on http://localhost:${PORT}`);
+    console.log(`✅ Server running`);
 });
