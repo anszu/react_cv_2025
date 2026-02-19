@@ -1,13 +1,13 @@
 import OpenAI from 'openai';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 export async function getChatCompletion(
-    messages: OpenAI.ChatCompletionMessageParam[],
+    messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[],
+    client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 ) {
-    const completion = await openai.chat.completions.create({
-        model: 'gpt-4o',
+    const response = await client.chat.completions.create({
+        model: 'gpt-4o-mini',
         messages,
     });
-    return completion.choices?.[0]?.message?.content ?? null;
+
+    return response.choices?.[0]?.message?.content ?? null;
 }
