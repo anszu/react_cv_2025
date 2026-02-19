@@ -1,9 +1,7 @@
-import type { ContentType } from 'src/Data/types/ContentData';
 import { Description } from 'src/shared/Description';
 import { Link } from 'src/shared/Link';
 import { List } from 'src/shared/List';
-
-type ProjectsData = ContentType['projects'];
+import type { ProjectsData } from 'src/Data/schemas/ProjectsSchema';
 
 export const Projects = ({ data }: { data: ProjectsData }) => (
     <List>
@@ -15,7 +13,7 @@ export const Projects = ({ data }: { data: ProjectsData }) => (
                         {p.link}
                     </Link>
                 )}
-                <Description description={p.description} />
+                {p.description && <Description description={p.description} />}
             </li>
         ))}
     </List>

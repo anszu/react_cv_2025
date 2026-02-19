@@ -1,7 +1,5 @@
-import type { ContentType } from 'src/Data/types/ContentData';
 import { Subtitle } from 'src/shared/Subtitle';
-
-type VolunteeringData = ContentType['volunteering'];
+import type { VolunteeringData } from 'src/Data/schemas/VolunteeringSchema';
 
 export const Volunteering = ({ data }: { data: VolunteeringData }) => (
     <div>
@@ -11,11 +9,13 @@ export const Volunteering = ({ data }: { data: VolunteeringData }) => (
                 <Subtitle optionalClasses="mb-4">
                     {v.organization} ({v.period})
                 </Subtitle>
-                <ul className="italic text-sm">
-                    {v.tasks.map((t, j) => (
-                        <li key={j}>{t}</li>
-                    ))}
-                </ul>
+                {v.tasks && (
+                    <ul className="italic text-sm">
+                        {v.tasks.map((t, j) => (
+                            <li key={j}>{t}</li>
+                        ))}
+                    </ul>
+                )}
             </div>
         ))}
     </div>

@@ -1,9 +1,7 @@
 import React from 'react';
-import type { ContentType } from 'src/Data/types/ContentData';
 import { Link } from 'src/shared/Link';
 import { List } from 'src/shared/List';
-
-type EducationData = ContentType['education'];
+import type { EducationData } from 'src/Data/schemas/EducationSchema';
 
 export const Education = React.memo(({ data }: { data: EducationData }) => (
     <List>

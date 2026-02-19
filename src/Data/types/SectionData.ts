@@ -17,6 +17,6 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 export interface SectionType {
     id: SectionId;
-    title: string;
-    icon: string;
+    title?: string;
+    icon?: string;
 }

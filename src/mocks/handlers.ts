@@ -87,6 +87,9 @@ export const handlers = [
                     description: 'Demo shop with filters and cart.',
                     link: 'https://github.com/janedoe/ecommerce-demo',
                 },
+                {
+                    name: 'Others',
+                },
             ],
             [SectionId.VOLUNTEERING]: [
                 {

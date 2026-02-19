@@ -13,7 +13,7 @@ export default meta;
 type Story = StoryObj<typeof Content>;
 
 const mockProviderValue = {
-    contentData: [],
+    contentData: {},
     contentError: null,
     contentLoading: false,
     sectionData: [],

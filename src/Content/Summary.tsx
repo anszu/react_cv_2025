@@ -1,5 +1,4 @@
-import type { ContentType } from 'src/Data/types/ContentData';
-type SummaryData = ContentType['summary'];
+import type { SummaryData } from 'src/Data/schemas/SummarySchema';
 
 export const Summary = ({ data }: { data: SummaryData }) => (
     <p className="italic">{data}</p>

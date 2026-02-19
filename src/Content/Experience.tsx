@@ -1,9 +1,7 @@
-import type { ContentType } from 'src/Data/types/ContentData';
 import { Description } from 'src/shared/Description';
 import { Link } from 'src/shared/Link';
 import { Subtitle } from 'src/shared/Subtitle';
-
-type ExperienceData = ContentType['experience'];
+import type { ExperienceData } from 'src/Data/schemas/ExperienceSchema';
 
 export const Experience = ({ data }: { data: ExperienceData }) => (
     <ul className="flex flex-col gap-6 print:gap-4">
@@ -27,12 +25,13 @@ export const Experience = ({ data }: { data: ExperienceData }) => (
                 {item.description && (
                     <Description description={item.description} />
                 )}
-
-                <ul className="list-disc pl-4 print:last:mb-0">
-                    {item.tasks.map((t, j) => (
-                        <li key={j}>{t}</li>
-                    ))}
-                </ul>
+                {item.tasks && (
+                    <ul className="list-disc pl-4 print:last:mb-0">
+                        {item.tasks.map((t, j) => (
+                            <li key={j}>{t}</li>
+                        ))}
+                    </ul>
+                )}
             </li>
         ))}
     </ul>

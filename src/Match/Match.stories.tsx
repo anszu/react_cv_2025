@@ -5,7 +5,7 @@ import { expect } from 'storybook/test';
 import { DataContext } from 'src/Data/DataContext';
 
 const mockProviderValue = {
-    contentData: [],
+    contentData: {},
     contentError: null,
     contentLoading: false,
     sectionData: [],

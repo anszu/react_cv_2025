@@ -1,5 +1,4 @@
 import { SectionId } from 'src/Data/types/SectionData';
-import type { ContentType } from 'src/Data/types/ContentData';
 import { Heading } from 'src/Content/Heading';
 import { Contact } from 'src/Content/Contact';
 import { Summary } from 'src/Content/Summary';
@@ -12,10 +11,20 @@ import { Referees } from 'src/Content/Referees';
 import { useDataContext } from 'src/Data/hooks/useDataContext';
 import { LoadingSpinner } from 'src/shared/LoadingSpinner';
 import { Match } from 'src/Match/Match';
+import { ContactSchema } from 'src/Data/schemas/ContactSchema';
+import { EducationSchema } from 'src/Data/schemas/EducationSchema';
+import { ExperienceSchema } from 'src/Data/schemas/ExperienceSchema';
+import { HeadingSchema } from 'src/Data/schemas/HeadingSchema';
+import { ProjectsSchema } from 'src/Data/schemas/ProjectsSchema';
+import { RefereesSchema } from 'src/Data/schemas/RefereesSchema';
+import { SkillsSchema } from 'src/Data/schemas/SkillsSchema';
+import { SummarySchema } from 'src/Data/schemas/SummarySchema';
+import { VolunteeringSchema } from 'src/Data/schemas/VolunteeringSchema';
+import type { ContentData } from 'src/Data/types/ContentData';
 
 export const Content = ({ sectionId }: { sectionId: SectionId }) => {
     const { contentData: data, contentLoading: loading } = useDataContext<{
-        contentData?: ContentType;
+        contentData?: ContentData;
         contentLoading: boolean;
     }>();
 
@@ -31,23 +40,45 @@ export const Content = ({ sectionId }: { sectionId: SectionId }) => {
 
     switch (sectionId) {
         case SectionId.HEADING:
-            return <Heading data={data.heading} />;
+            const resultHeading = HeadingSchema.safeParse(data.heading);
+            if (!resultHeading.success) return null;
+            return <Heading data={resultHeading.data} />;
         case SectionId.CONTACT:
-            return <Contact data={data.contact} />;
+            const resultContact = ContactSchema.safeParse(data.contact);
+            if (!resultContact.success) return null;
+            return <Contact data={resultContact.data} />;
         case SectionId.SUMMARY:
-            return <Summary data={data.summary} />;
+            const resultSummary = SummarySchema.safeParse(data.summary);
+            if (!resultSummary.success) return null;
+            return <Summary data={resultSummary.data} />;
         case SectionId.SKILLS:
-            return <Skills data={data.skills} />;
+            const resultSkills = SkillsSchema.safeParse(data.skills);
+            if (!resultSkills.success) return null;
+            return <Skills data={resultSkills.data} />;
         case SectionId.EXPERIENCE:
-            return <Experience data={data.experience} />;
+            const resultExperience = ExperienceSchema.safeParse(
+                data.experience,
+            );
+            if (!resultExperience.success) return null;
+            return <Experience data={resultExperience.data} />;
         case SectionId.EDUCATION:
-            return <Education data={data.education} />;
+            const resultEducation = EducationSchema.safeParse(data.education);
+            if (!resultEducation.success) return null;
+            return <Education data={resultEducation.data} />;
         case SectionId.PROJECTS:
-            return <Projects data={data.projects} />;
+            const resultProjects = ProjectsSchema.safeParse(data.projects);
+            if (!resultProjects.success) return null;
+            return <Projects data={resultProjects.data} />;
         case SectionId.VOLUNTEERING:
-            return <Volunteering data={data.volunteering} />;
+            const resultVolunteering = VolunteeringSchema.safeParse(
+                data.volunteering,
+            );
+            if (!resultVolunteering.success) return null;
+            return <Volunteering data={resultVolunteering.data} />;
         case SectionId.REFEREES:
-            return <Referees data={data.referees} />;
+            const resultReferees = RefereesSchema.safeParse(data.referees);
+            if (!resultReferees.success) return null;
+            return <Referees data={resultReferees.data} />;
         case SectionId.MATCH:
             return <Match />;
         default:
