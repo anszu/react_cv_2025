@@ -15,5 +15,6 @@
         "utils/**/*.ts",
         "middleware/**/*.ts",
         "mocks/setupTests.ts"
-    ]
+    ],
+    "exclude": ["node_modules", "**/*.test.ts"]
 }
